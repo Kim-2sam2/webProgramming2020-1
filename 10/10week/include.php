@@ -4,9 +4,9 @@ session_start();
 include("./lib.php");
 
 $db_host = "localhost";
-$db_user="user1";
-$db_pass="pass1";
-$db_name="name1";
+$db_user="phpweb";
+$db_pass="1234";
+$db_name="webp";
 $db_port="3306";
 $connect = mysqli_connect($db_host,$db_user,$db_pass,$db_name,$db_port);
 ?>
