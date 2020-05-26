@@ -1,0 +1,14 @@
+* { padding: 0; margin: 0;}
+ul { list-style-type: none; }
+body { margin: 0px; padding: 0px; }
+
+#top { position: relative; width: 1000px; height: 80px; margin:0 auto; }
+#top h3{ position:absolute; top:25px; left:40px; font-size: 25px; }
+#top #top_info{ float: right; margin: 30px 60px 0 0; }
+#top #top_info li{ display: inline; }
+
+#menu_bar { height: 48px; background-color: #443e58; font-size: 16px; }
+#menu_bar ul { width: 1000px; margin: 0 auto; padding: 14px 0 0 40px; }
+#menu_bar li { display: inline; margin-left: 90px; color: white; }
+
+
