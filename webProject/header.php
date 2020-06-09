@@ -16,3 +16,11 @@
         <li>Ranking</li>
     </ul>
 </div>
+
+<div id="user_bar">
+    <ul>
+        <li>login</li>
+        <li>sign up</li>    
+    </ul>
+
+</div>

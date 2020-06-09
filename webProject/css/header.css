@@ -8,7 +8,10 @@ body { margin: 0px; padding: 0px; }
 #top #top_info li{ display: inline; }
 
 #menu_bar { height: 48px; background-color: #443e58; font-size: 16px; }
-#menu_bar ul { width: 1000px; margin: 0 auto; padding: 14px 0 0 40px; }
+#menu_bar ul { width: 50%; margin: 0 auto; padding: 14px 0 0 40px; }
 #menu_bar li { display: inline; margin-left: 90px; color: white; }
 
+#user_bar { height: 48px; background-color: black; font-size: 16px; }
+#user_bar ul { width: 50%; margin: 0 auto; padding: 14px 0 0 40px; }
+#user_bar li { display: inline; margin-left: 90px; color: white; }
 
