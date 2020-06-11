@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +11,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
+
 <body>
-    <div class=wrapper>
-        <header>
-            <?php include "header.php"?>
+    <div class="wrapper">
+        <header class="header">
+            <?php include "header.php" ?>
         </header>
-        <section class=container>
-            <?php include "main.php"?>
-            <?php include "login_form.php"?>
+        <section class="main">
+            <?php include "main.php" ?>
         </section>
-        <footer>
-            <?php include "footer.php"?>
+        <section class="login_form">
+            <?php include "login_form.php" ?>
+        </section>
+        <footer class="footer">
+            <?php include "footer.php" ?>
         </footer>
-        
+
     </div>
 
 </body>
+
+</html>
+</body>
+
 </html>

@@ -1,6 +1,12 @@
-.login_form {
-    float: left;
-    height: 100px;
-    width: 300px;
-    background: pink;
+.login {
+  float: left;
+  margin: 10px;
+}
+
+.login #input {
+  display: inline;
+}
+
+.login #login_btn {
+  display: inline;
 }

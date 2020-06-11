@@ -1,12 +1,9 @@
 <div class="top">
     <div id="title">
-        <a href="index.php">TITLE</a>
+        <a href="index.php">TITLE 크게 수정</a>
     </div>
-    <ul id="top_info">
-        <li>info1</li>
-        <li>info2</li>
-    </ul>
 </div>
+
 
 <nav class="menu_bar">
     <ul>
