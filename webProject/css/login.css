@@ -1,7 +1,6 @@
 .login_form {
-    float: right;
+    float: left;
     height: 100px;
     width: 300px;
-    position: sticky;
     background: pink;
 }

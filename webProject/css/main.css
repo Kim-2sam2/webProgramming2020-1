@@ -1,6 +1,6 @@
 .main {
     float: left;
-    width: 600px;
-    background: wheat;
-    margin-right: 50px;
+    width: 900px;
+    margin:0 40px;
+    background: yellow;
 }
