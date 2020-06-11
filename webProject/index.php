@@ -15,13 +15,10 @@
         <header>
             <?php include "header.php"?>
         </header>
-        <section>
-            <div class="main">
-              <?php include "main.php"?>
-            </div>
-            <div class="login">
-                <?php include "login_form.php"?>
-            </div>  
+        <section class=container>
+            <?php include "main.php"?>
+            <?php include "login_form.php"?>
+        </section>
         <footer>
             <?php include "footer.php"?>
         </footer>

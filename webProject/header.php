@@ -2,7 +2,7 @@
     <div id="title">
         <a href="index.php">TITLE</a>
     </div>
-    <ul class="top_info">
+    <ul id="top_info">
         <li>info1</li>
         <li>info2</li>
     </ul>
@@ -16,6 +16,3 @@
         <li><a href="#">Ranking</a></li>
     </ul>
 </nav>
-
-
-</div>
