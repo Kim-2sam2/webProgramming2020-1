@@ -1,59 +1,138 @@
+:root {
+  /*color*/
+  --main-green-color: #00695c;
+  --dark-green-color: #003d32;
+  --ligt-green-color: #439688;
+  --main-brown-color: #795548;
+  --dark-brown-color: #4b2c20;
+  --light-brown-color: #a98274;
+  --gray-color: #e0e0e0;
+  --white-color: #fafafa;
+
+  /*Size*/
+  --up--padding: 10px;
+  --side-padding: 20px;
+  --max-width: 1300px;
+  --min-width: 800px;
+
+  /*Font size*/
+  --font-large: 18px;
+  --font-medium: 16px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  color: var(--white-color);
 }
+
 ul {
   list-style-type: none;
 }
-body {
-  margin: 0px;
-  padding: 0px;
-  background: #ccc;
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
-  max-width: 1300px;
-  min-width: 1000px;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  /*
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 130px auto 130px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 130px 1000px 130px;
   grid-template-areas:
     "header header header"
-    "main main login_form"
+    "main main aside"
     "footer footer footer";
-  grid-gap: 5px;
-
-  padding: 40px 0 0 0;
-  margin: 0 auto;
+    */
   background: green;
+  margin: 0 auto;
 }
 
-.header {
+header {
   grid-area: header;
+  text-align: center;
 }
 
-.main {
+.title {
+  font-size: 100px;
+}
+
+.top_menu {
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  background: var(--main-green-color);
+}
+
+.top_menu ul {
+  max-width: 880px;
+  min-width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top_menu ul li {
+  display: inline-block;
+  height: 100%;
+  line-height: 55px;
+  padding: 0 50px;
+  margin: 0 -3px;
+  border-left: 1px solid black;
+}
+
+.top_menu ul li:hover {
+  background: var(--dark-green-color);
+}
+
+.top_menu ul li:first-child {
+  border-left: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.top_menu ul li:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+  height: 1000px;
+  padding: var(--up--padding) var(--side-padding);
+}
+
+.middle .main {
   grid-area: main;
-  margin: 0 10px 0 30px;
-  background: yellow;
+  width: 100%;
+  margin-right: 20px;
+  background: var(--ligt-green-color);
 }
 
-.login_form {
-  grid-area: login_form;
+.middle .aside {
+  grid-area: aside;
+  height: 400px;
   position: sticky;
-  top: 50px;
-  height: 100px;
-  max-width: 250px;
-  min-width: 250px;
-
-  background: pink;
+  top: 0;
+  background: var(--main-brown-color);
 }
 
-/*
-position: sticky => 스크롤해도 고정
-semanticUI
-emmet
-material design
+.middle .aside .login input {
+  color: black;
+}
 
-mylist는 2행으로 flex속성
-*/
+.middle .aside .sidebar {
+  border: 3px;
+  background: white;
+}
+
+footer {
+  grid-area: footer;
+  width: var(--max-width);
+  background: black;
+}
