@@ -1,0 +1,31 @@
+.middle .main {
+  width: 100%;
+  margin-right: 20px;
+  background: var(--ligt-green-color);
+}
+
+.middle .main ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: var(--side-padding);
+}
+
+.middle .main li {
+  font-size: var(--font-medium);
+}
+
+.middle .main .content {
+  display: grid;
+  border: 3px solid white;
+  text-align: center;
+  margin: var(--side-padding);
+}
+
+.middle .main .content .id {
+  font-size: var(--font-super);
+}
+
+.middle .main .content .todo {
+  display: inline;
+}

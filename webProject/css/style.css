@@ -16,9 +16,10 @@
   --min-width: 800px;
 
   /*Font size*/
-  --font-large: 18px;
-  --font-medium: 16px;
-  --font-small: 12px;
+  --font-super: 24px;
+  --font-large: 20px;
+  --font-medium: 18px;
+  --font-small: 16px;
   --font-micro: 10px;
 }
 
@@ -53,82 +54,11 @@ a {
   margin: 0 auto;
 }
 
-header {
-  grid-area: header;
-  text-align: center;
-}
-
-.title {
-  font-size: 100px;
-}
-
-.top_menu {
-  height: 50px;
-  font-size: 20px;
-  text-align: center;
-  background: var(--main-green-color);
-}
-
-.top_menu ul {
-  max-width: 880px;
-  min-width: 800px;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.top_menu ul li {
-  display: inline-block;
-  height: 100%;
-  line-height: 55px;
-  padding: 0 50px;
-  margin: 0 -3px;
-  border-left: 1px solid black;
-}
-
-.top_menu ul li:hover {
-  background: var(--dark-green-color);
-}
-
-.top_menu ul li:first-child {
-  border-left: 0;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-}
-.top_menu ul li:last-child {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
 .middle {
   display: flex;
   justify-content: space-between;
   height: 1000px;
   padding: var(--up--padding) var(--side-padding);
-}
-
-.middle .main {
-  grid-area: main;
-  width: 100%;
-  margin-right: 20px;
-  background: var(--ligt-green-color);
-}
-
-.middle .aside {
-  grid-area: aside;
-  height: 400px;
-  position: sticky;
-  top: 0;
-  background: var(--main-brown-color);
-}
-
-.middle .aside .login input {
-  color: black;
-}
-
-.middle .aside .sidebar {
-  border: 3px;
-  background: white;
 }
 
 footer {
