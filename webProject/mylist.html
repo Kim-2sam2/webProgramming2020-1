@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20160705</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/aside.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--<?php include "header.php";?>-->
+      <header>
+        <div class="title">
+          <a href="#">TITLE</a>
+        </div>
+        <nav class="top_menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mylist.html">MyList</a></li>
+            <li><a href="board.html">Board</a></li>
+            <li><a href="ranking.html">Ranking</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="middle">
+        <section class="insert">
+          <div>INSERT</div>
+        </section>
+
+        <!--aside의 정보를 계속 가지고 있어야함-->
+        <!--<?php include "aside.php"?>-->
+        <section class="aside">
+          <div>
+            <form name="login" method="post" action="#">
+              <input type="ID" class="id" name="아이디" />
+              <input type="PW" class="pw" name="비밀번호" />
+              <input type="submit" class="login" value="로그인" />
+              <input type="button" class="signup" value="회원 가입" />
+            </form>
+          </div>
+
+          <div class="sidebar">
+            sidebar
+          </div>
+        </section>
+      </section>
+
+      <!--<?php include "footer.php"?>-->
+    </div>
+  </body>
+</html>
