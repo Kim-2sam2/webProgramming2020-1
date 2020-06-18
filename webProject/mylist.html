@@ -6,7 +6,18 @@
     <title>20160705</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/mylist.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <script>
+      function addList(){
+        var todo = document.getElementsByClassName("todo");
+        var textnode = document.createTextNode(todo[0].value);
+        var node = document.createElement("LI");
+        var list = document.getElementsByClassName("myList");
+        node.appendChild(textnode);
+        list[0].appendChild(node);
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -26,9 +37,33 @@
       </header>
 
       <section class="middle">
-        <section class="insert">
-          <div>INSERT</div>
-        </section>
+        <div class="myBoard">
+          <div class="myBoard_list">
+            <ul class="myTodo">
+              <li>
+                <span class="col"><a herf="#">mylist1</a></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="insert_view">
+            <div class="input_form">
+              <form name="inset_list" method="post" action="#">
+                <input type="text" class="title" name="제목">
+                <input type="text" class="todo" name="할 일">
+                <button type="button" onclick="addList()">ADD</button>
+            </div>
+            <div class="insert_form">
+                <ul class="myList">
+                  <li>study</li>
+                  <li>adfadf</li>
+                  <li>adfadf</li>
+                </ul>
+                <input type="submit" value="제출">
+              </form>
+            </div>
+          </div>
+        </div>
 
         <!--aside의 정보를 계속 가지고 있어야함-->
         <!--<?php include "aside.php"?>-->
