@@ -21,17 +21,22 @@
         todo[0].value = "";
       }
 
-      function w3_open() {
-        document.getElementById("main").style.marginLeft = "25%";
-        document.getElementById("mySidebar").style.width = "25%";
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("openNav").style.display = "none";
+      function show() {
+        document.getElementsByClassName("view")[0].style.display = "block";
+      }
+      function hide() {
+        document.getElementsByClassName("view")[0].style.display = "none";
       }
 
-      function w3_close() {
-        document.getElementById("main").style.marginLeft = "0%";
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("openNav").style.display = "inline-block";
+      function check_todo() {
+        var chkbox = document.querySelectorAll("#todo_list .check");
+        for (var i in chkbox) {
+          if (chkbox[i].checked == true) {
+            chkbox[i].nextElementSibling.style.textDecoration = "line-through";
+          } else {
+            chkbox[i].nextElementSibling.style.textDecoration = "none";
+          }
+        }
       }
     </script>
   </head>
@@ -56,47 +61,83 @@
       <section class="middle">
         <div class="myBoard">
           <div class="myBoard_list">
-            <ul>
-              <li>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-              </li>
-            </ul>
+            <div class="col" onclick="show()">
+              test
+            </div>
+            <div class="col" onclick="show()">
+              mylist
+            </div>
+            <div class="col" onclick="show()">
+              mylist1
+            </div>
+            <div class="col" onclick="show()">
+              mylist1
+            </div>
+            <div class="col" onclick="show()">
+              mylist1
+            </div>
+            <div class="col" onclick="show()">
+              mylist1
+            </div>
+            <div class="col" onclick="show()">
+              mylist1
+            </div>
           </div>
 
-          <form class="insert_view" name="insert_list" method="post" action="#">
-            <div class="input_form">
-              <input type="text" class="title" placeholder="제목" />
-              <input type="text" class="todo" placeholder="할 일" />
-              <div id="button_div">
-                <button type="button" class="add" onclick="addList()">
-                  ADD
-                </button>
+          <div class="viewer">
+            <!--default view-->
+            <form
+              class="insert_view"
+              name="insert_list"
+              method="post"
+              action="#"
+            >
+              <div class="input_form">
+                <input type="text" class="title" placeholder="제목" />
+                <input type="text" class="todo" placeholder="할 일" />
+                <div id="button_div">
+                  <button type="button" class="add" onclick="addList()">
+                    ADD
+                  </button>
+                </div>
+              </div>
+              <div class="insert_form">
+                <ul class="myList"></ul>
+                <div id="button_div">
+                  <input type="submit" value="저장" />
+                </div>
+              </div>
+            </form>
+
+            <!--popup view-->
+            <div class="view">
+              <div class="todo_view">
+                <div id="title">
+                  title
+                </div>
+                <button id="close" onclick="hide()">X</button>
+
+                <ul id="todo_list">
+                  <li>
+                    <input
+                      class="check"
+                      type="checkbox"
+                      onclick="check_todo()"
+                    />
+                    <div id="content">asdasd</div>
+                  </li>
+                  <li>
+                    <input
+                      class="check"
+                      type="checkbox"
+                      onclick="check_todo()"
+                    />
+                    <div id="content">123123</div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="insert_form">
-              <ul class="myList"></ul>
-              <div id="button_div">
-                <input type="submit" value="저장" />
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
 
         <!--aside의 정보를 계속 가지고 있어야함-->
