@@ -12,10 +12,26 @@
       function addList() {
         var todo = document.getElementsByClassName("todo");
         var textnode = document.createTextNode(todo[0].value);
-        var node = document.createElement("LI");
+        var li = document.createElement("LI");
+        var node = document.createElement("DIV");
         var list = document.getElementsByClassName("myList");
         node.appendChild(textnode);
-        list[0].appendChild(node);
+        li.appendChild(node);
+        list[0].appendChild(li);
+        todo[0].value = "";
+      }
+
+      function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = "none";
+      }
+
+      function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
       }
     </script>
   </head>
@@ -36,6 +52,7 @@
         </nav>
       </header>
 
+      <!--main section-->
       <section class="middle">
         <div class="myBoard">
           <div class="myBoard_list">
@@ -59,50 +76,25 @@
                 <div class="col" OnClick="location.href='./index.html'">
                   mylist1
                 </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist1
-                </div>
-                <div class="col" OnClick="location.href='./index.html'">
-                  mylist11
-                </div>
               </li>
             </ul>
           </div>
 
           <form class="insert_view" name="insert_list" method="post" action="#">
             <div class="input_form">
-              <input type="text" class="title" name="제목" />
-              <input type="text" class="todo" name="할 일" />
-              <button type="button" class="add" onclick="addList()">ADD</button>
+              <input type="text" class="title" placeholder="제목" />
+              <input type="text" class="todo" placeholder="할 일" />
+              <div id="button_div">
+                <button type="button" class="add" onclick="addList()">
+                  ADD
+                </button>
+              </div>
             </div>
             <div class="insert_form">
-              <ul class="myList">
-                <li>study</li>
-                <li>adfadf</li>
-                <li>adfadf</li>
-              </ul>
-              <input type="submit" value="제출" />
+              <ul class="myList"></ul>
+              <div id="button_div">
+                <input type="submit" value="저장" />
+              </div>
             </div>
           </form>
         </div>
@@ -112,8 +104,8 @@
         <section class="aside">
           <div>
             <form name="login" method="post" action="#">
-              <input type="ID" class="id" name="아이디" />
-              <input type="PW" class="pw" name="비밀번호" />
+              <input type="ID" class="id" placeholder="아이디" />
+              <input type="PW" class="pw" placeholder="비밀번호" />
               <input type="submit" class="login" value="로그인" />
               <input type="button" class="signup" value="회원 가입" />
             </form>

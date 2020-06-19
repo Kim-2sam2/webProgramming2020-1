@@ -23,23 +23,21 @@
   --font-micro: 10px;
 }
 
-.middle .myBoard {
+.myBoard {
   display: grid;
   grid-template-columns: minmax(200px, auto) 660px;
   width: 100%;
   height: 570px;
   text-align: center;
   padding-right: var(--side-padding);
-  background: pink;
 }
 
-.middle .myBoard .myBoard_list {
-  border-right: 5px solid blue;
+.myBoard_list {
   background: grey;
   overflow: auto;
 }
 
-.middle .myBoard .myBoard_list .col {
+.myBoard_list .col {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -50,38 +48,89 @@
   cursor: pointer;
 }
 
-.middle .myBoard .insert_view {
+.insert_view {
   display: grid;
   grid-template-rows: 230px 340px;
   text-align: center;
-  background: black;
 }
 
-.middle .myBoard .insert_view .input_form {
-  padding-top: var(--up--padding);
+.insert_view .input_form {
+  padding-top: 20px;
   display: grid;
   grid-template-columns: 110px 440px 110px;
   grid-template-rows: repeat(4, 50px);
   text-align: center;
-  background: red;
+  border: 2px solid yellow;
 }
 
-.middle .myBoard .insert_view .insert_form {
+.insert_view .input_form .title {
+  grid-column: 2/3;
+  color: black;
+  font-size: var(--font-super);
+  text-align: center;
+  height: 30px;
+}
+
+.insert_view .input_form .todo {
+  grid-column: 2/3;
+  color: black;
+  font-size: var(--font-large);
+  text-align: center;
+}
+
+.insert_view .input_form #button_div {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.insert_view .input_form #button_div .add {
+  width: 50px;
+  height: 30px;
+  margin-top: 10px;
+  color: black;
+  font-size: 14px;
+}
+
+.insert_form {
+  display: grid;
+  grid-template-columns: 110px 440px 110px;
+  grid-template-rows: 1fr;
   padding-top: var(--up--padding);
-  background: blue;
-}
-.middle .myBoard .insert_view .input_form .title {
-  grid-column: 2/3;
-}
-
-.middle .myBoard .insert_view .input_form .todo {
-  grid-column: 2/3;
+  text-align: center;
+  border-right: 2px solid yellow;
+  border-left: 2px solid yellow;
+  border-bottom: 2px solid yellow;
 }
 
-.middle .myBoard .insert_view .input_form .add {
+.insert_form .myList {
   grid-column: 2/3;
+  overflow: auto;
+  text-align: center;
 }
 
-input {
-  height: 40px;
+.insert_form .myList li {
+  border-bottom: 3px solid black;
+}
+
+.insert_form .myList li:last-child {
+  border-bottom: 3px solid black;
+}
+
+.insert_form .myList div {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: var(--font-medium);
+}
+
+.insert_form #button_div {
+  grid-column: 2/3;
+  grid-row: 2/2;
+
+  text-align: center;
+}
+
+.insert_form #button_div input {
+  color: black;
+  width: 80px;
 }
