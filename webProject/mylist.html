@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/mylist.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
     <script>
-      function addList(){
+      function addList() {
         var todo = document.getElementsByClassName("todo");
         var textnode = document.createTextNode(todo[0].value);
         var node = document.createElement("LI");
@@ -39,30 +39,72 @@
       <section class="middle">
         <div class="myBoard">
           <div class="myBoard_list">
-            <ul class="myTodo">
+            <ul>
               <li>
-                <span class="col"><a herf="#">mylist1</a></span>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist1
+                </div>
+                <div class="col" OnClick="location.href='./index.html'">
+                  mylist11
+                </div>
               </li>
             </ul>
           </div>
 
-          <div class="insert_view">
+          <form class="insert_view" name="insert_list" method="post" action="#">
             <div class="input_form">
-              <form name="inset_list" method="post" action="#">
-                <input type="text" class="title" name="제목">
-                <input type="text" class="todo" name="할 일">
-                <button type="button" onclick="addList()">ADD</button>
+              <input type="text" class="title" name="제목" />
+              <input type="text" class="todo" name="할 일" />
+              <button type="button" class="add" onclick="addList()">ADD</button>
             </div>
             <div class="insert_form">
-                <ul class="myList">
-                  <li>study</li>
-                  <li>adfadf</li>
-                  <li>adfadf</li>
-                </ul>
-                <input type="submit" value="제출">
-              </form>
+              <ul class="myList">
+                <li>study</li>
+                <li>adfadf</li>
+                <li>adfadf</li>
+              </ul>
+              <input type="submit" value="제출" />
             </div>
-          </div>
+          </form>
         </div>
 
         <!--aside의 정보를 계속 가지고 있어야함-->
