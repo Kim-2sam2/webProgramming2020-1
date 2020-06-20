@@ -36,7 +36,9 @@
                 </div>
             </div>
             <div class="insert_form">
-                <ul class="myList"></ul>
+                <ul class="myList" index="0">
+
+                </ul>
                 <div id="button_div">
                     <input type="submit" value="저장" />
                 </div>

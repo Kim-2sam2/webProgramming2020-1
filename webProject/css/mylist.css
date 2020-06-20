@@ -108,6 +108,14 @@
   text-align: center;
 }
 
+.insert_form .myList div {
+  display: inline-block;
+}
+.insert_form .myList button {
+  float: right;
+  margin-top: 5px;
+}
+
 .insert_form .myList li {
   border-bottom: 3px solid black;
 }
