@@ -171,6 +171,7 @@
   grid-column: 2/3;
   float: center;
   background: grey;
+  overflow: auto;
 }
 
 .todo_view #todo_list li {
