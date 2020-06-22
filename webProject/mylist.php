@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,21 +18,20 @@
 <body>
     <div class="wrapper">
         <header>
-            <?php include "module/header.php"; ?>
+            <?php include "header.php"; ?>
         </header>
 
         <!--main section-->
         <section class="middle">
-            <?php include "module/myboard.php"; ?>
-
+            <?php include "myboard.php"; ?>
 
             <!--aside의 정보를 계속 가지고 있어야함-->
-            <?php include "module/aside.php" ?>
+            <?php include "aside.php" ?>
 
         </section>
 
         <footer>
-            <?php include "module/footer.php" ?>
+            <?php include "footer.php" ?>
         </footer>
     </div>
 </body>

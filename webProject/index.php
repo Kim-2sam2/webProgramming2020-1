@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,22 +12,23 @@
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <?php include "module/header.php" ?>
+            <?php include "header.php" ?>
         </header>
 
         <section class="middle">
-            <?php include "module/main.php" ?>
-            <?php include "module/aside.php" ?>
+            <?php include "main.php" ?>
+            <?php include "aside.php" ?>
         </section>
 
 
         <footer>
-            <?php include "module/footer.php" ?>
+            <?php include "footer.php" ?>
 
         </footer>
     </div>

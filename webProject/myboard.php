@@ -1,5 +1,6 @@
 <div class="myBoard">
     <div class="myBoard_list">
+        <!--show에 파라미터 넘겨주고 check_todo()랑 hide()에서도 적용-->
         <div class="col" onclick="show()">
             test
         </div>
@@ -25,7 +26,7 @@
 
     <div class="viewer">
         <!--default view-->
-        <form class="insert_view" name="insert_list" method="post" action="#">
+        <form class="insert_view" name="insert_list" method="post" action="list_insert.php">
             <div class="input_form">
                 <input type="text" class="title" placeholder="제목" />
                 <input type="text" class="todo" placeholder="할 일" />

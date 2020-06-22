@@ -22,7 +22,7 @@
         $row = mysqli_fetch_array($result);
         $db_pass = $row["pass"];
 
-        mysqli_close($con);
+        #mysqli_close($con); //sidebar.php에서 close
 
         if($pass != $db_pass)
         {
@@ -49,5 +49,4 @@
               </script>
             ");
         }
-     }        
-?>
+     }

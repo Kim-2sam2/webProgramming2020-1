@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,22 +12,26 @@
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/board.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <script type="text/javascript" src="scripts/mylist.js"></script>
+
 </head>
 
 <body>
     <div class="wrapper">
-        <?php include "module/header.php"; ?>
-        <section class="middle">
-            <?php include "module/board_box.php"; ?>
+        <header>
+            <?php include "header.php"; ?>
+        </header>
 
+        <section class="middle">
+            <?php include "board_box.php"; ?>
 
             <!--aside의 정보를 계속 가지고 있어야함-->
-            <?php include "module/aside.php" ?>
+            <?php include "aside.php" ?>
 
         </section>
 
         <footer>
-            <?php include "module/footer.php" ?>
+            <?php include "footer.php" ?>
         </footer>
     </div>
 </body>
