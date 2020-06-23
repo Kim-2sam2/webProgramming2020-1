@@ -10,8 +10,8 @@ function addList() {
   list[0].setAttribute("index", index + 1);
   li.id = index;
 
+  button.className = "remove";
   button.setAttribute("type", "button");
-  button.setAttribute("class", "remove");
   button.setAttribute("onclick", "remove(this)");
   button.setAttribute("target", index);
   button.innerHTML = "제거";
@@ -63,7 +63,7 @@ function side_check_todo() {
 }
 
 function view_todo(content, fin) {
-  var todo = document.getElementById('side_todo_list');
+  var todo = document.getElementById("side_todo_list");
   var input = document.createElement("INPUT");
   input.setAttribute("class", "side_check");
   input.setAttribute("type", "checkbox");
