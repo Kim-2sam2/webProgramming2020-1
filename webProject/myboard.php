@@ -26,7 +26,7 @@
 
     <div class="viewer">
         <!--default view-->
-        <form class="insert_view" name="insert_list" method="post" action="module/list_insert.php">
+        <form class="insert_view" name="insert_list" method="post" action="list_insert.php">
             <div class="input_form">
                 <input type="text" name="title" class="title" placeholder="제목" />
                 <input type="text" class="todo" placeholder="할 일" />

@@ -1,4 +1,5 @@
 <?php
+include 'func.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -26,12 +27,12 @@ session_start();
             <?php include "myboard.php"; ?>
 
             <!--aside의 정보를 계속 가지고 있어야함-->
-            <?php include "aside.php" ?>
+            <?php include "aside.php"; ?>
 
         </section>
 
         <footer>
-            <?php include "footer.php" ?>
+            <?php include "footer.php"; ?>
         </footer>
     </div>
 </body>

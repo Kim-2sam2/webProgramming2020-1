@@ -1,4 +1,5 @@
 <?php
+include 'func.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -18,17 +19,17 @@ session_start();
 <body>
     <div class="wrapper">
         <header>
-            <?php include "header.php" ?>
+            <?php include "header.php"; ?>
         </header>
 
         <section class="middle">
-            <?php include "main.php" ?>
-            <?php include "aside.php" ?>
+            <?php include "main.php"; ?>
+            <?php include "aside.php"; ?>
         </section>
 
 
         <footer>
-            <?php include "footer.php" ?>
+            <?php include "footer.php"; ?>
 
         </footer>
     </div>

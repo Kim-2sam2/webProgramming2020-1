@@ -51,6 +51,11 @@
   padding-bottom: 10px;
 }
 
+.sidebar {
+  text-align: center;
+}
+
+
 .sidebar #title {
   grid-column: 2/3;
   line-height: 60px;
@@ -61,6 +66,7 @@
 
 .sidebar #side_todo_list {
   grid-column: 2/3;
+  height: 250px;
   float: center;
   background: grey;
   overflow: auto;

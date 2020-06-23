@@ -1,8 +1,9 @@
 <?php
+include 'func.php';
 $id = $_POST["id"];
 $pass = $_POST["pass"];
 
-$con = mysqli_connect("localhost", "user_20160705", "12345", "webp_20160705");
+$con = connectDB();
 $sql = "select * from user_20160705 where id = '$id'";
 $result = mysqli_query($con, $sql);
 
@@ -36,7 +37,7 @@ if (!$num_match) {
 
         echo ("
                 <script>
-                    location.href = '../index.php';
+                    location.href = 'index.php';
                 </script>
             ");
     }

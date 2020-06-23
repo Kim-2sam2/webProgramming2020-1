@@ -1,13 +1,14 @@
 <section class="main">
     <ul>
         <?php
+        //include 'func.php';
         if (isset($_GET["page"])) {
             $page = $_GET["page"];
         } else {
             $page = 1;
         }
 
-        $con = mysqli_connect("localhost", "user_20160705", "12345", "webp_20160705");
+        $con = connectDB();
         $sql = "select L.num, L.id, L.title from todoList_20160705 L
         order by L.regist_day limit  6";
         $list = mysqli_query($con, $sql);
