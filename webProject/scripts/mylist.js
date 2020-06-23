@@ -1,20 +1,32 @@
 function addList() {
   var todo = document.getElementsByClassName("todo");
-  var textnode = document.createTextNode(todo[0].value);
+  var text = todo[0].value;
+  var textnode = document.createTextNode(text);
   var li = document.createElement("LI");
   var node = document.createElement("DIV");
   var button = document.createElement("BUTTON");
   var list = document.getElementsByClassName("myList");
 
   var index = list[0].getAttribute("index");
-  list[0].setAttribute("index", index + 1);
+  index = parseInt(index) + 1;
+  list[0].setAttribute("index", index);
   li.id = index;
+
+  var max = document.getElementById("max");
+  max.value = index;
+
+  var hidden = document.createElement("input");
+  hidden.type = "hidden";
+  hidden.name = index;
+  hidden.value = todo[0].value;
 
   button.className = "remove";
   button.setAttribute("type", "button");
   button.setAttribute("onclick", "remove(this)");
   button.setAttribute("target", index);
   button.innerHTML = "제거";
+
+  node.appendChild(hidden);
   node.appendChild(textnode);
   li.appendChild(node);
   li.appendChild(button);
@@ -25,8 +37,6 @@ function addList() {
 function remove(x) {
   var target = x.getAttribute("target");
   var feild = x.parentNode;
-  console.log(target);
-  console.log(feild);
   document.getElementsByClassName("myList")[0].removeChild(feild);
 }
 
@@ -65,7 +75,7 @@ function side_check_todo() {
 function view_todo(content, fin) {
   var todo = document.getElementById("side_todo_list");
   var input = document.createElement("INPUT");
-  input.setAttribute("class", "side_check");
+  input.className = "side_check";
   input.setAttribute("type", "checkbox");
   input.setAttribute("onclick", "side_check_todo()");
   var div = document.createElement("DIV");

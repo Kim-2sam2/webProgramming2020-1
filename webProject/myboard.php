@@ -28,7 +28,7 @@
         <!--default view-->
         <form class="insert_view" name="insert_list" method="post" action="module/list_insert.php">
             <div class="input_form">
-                <input type="text" class="title" placeholder="제목" />
+                <input type="text" name="title" class="title" placeholder="제목" />
                 <input type="text" class="todo" placeholder="할 일" />
                 <div id="button_div">
                     <button type="button" class="add" onclick="addList()">
@@ -37,6 +37,7 @@
                 </div>
             </div>
             <div class="insert_form">
+                <input type="hidden" id="max" name="max"></input>
                 <ul class="myList" index="0">
 
                 </ul>
