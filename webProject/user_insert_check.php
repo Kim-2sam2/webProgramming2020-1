@@ -35,7 +35,6 @@
         } else {
             $con = connectDB();
 
-
             $sql = "select id from user_20160705 where id='$userid'";
             $result = mysqli_query($con, $sql);
 
