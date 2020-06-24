@@ -13,6 +13,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <script type="text/javascript" src="scripts/common.js"></script>
     <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
 

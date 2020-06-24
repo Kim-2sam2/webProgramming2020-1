@@ -24,7 +24,7 @@
 
     <div class="viewer">
         <!--default view-->
-        <form class="insert_view" name="insert_list" method="post" action="list_insert.php">
+        <form class="insert_view" name="insert_list" method="post" action="mylist_insert.php">
             <div class="input_form">
                 <input type="text" name="title" class="title" placeholder="제목" />
                 <input type="text" class="todo" placeholder="할 일" />
@@ -65,15 +65,14 @@
                     where T.list = $index";
                     $todo_query = mysqli_query($con, $sql);
                     $todo_arr = mysqli_fetch_array($todo_query);
-                    $test = mysqli_num_rows($todo_query);
                     $title = $todo_arr['title'];
+                    mysqli_close($con);
+
                     echo (" 
                         <div id='title'> $title </div>
                         <button id='close' onclick='hide()'>X</button>
                         <ul id='todo_list'>
                     ");
-
-                    mysqli_close($con);
 
                     do {
                         $index = $todo_arr['num'];
@@ -106,14 +105,9 @@
                         }
                     } while ($todo_arr = mysqli_fetch_array($todo_query));
 
-                    echo ("</ul>
-
-                    ");
+                    echo ("</ul>");
                 }
-
-
                 ?>
-
             </div>
             <!--todoView-->
         </div>

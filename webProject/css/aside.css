@@ -1,7 +1,3 @@
-form {
-  display: none;
-}
-
 .middle .aside {
   width: 290px;
   height: 400px;
@@ -11,9 +7,13 @@ form {
   background: var(--main-brown-color);
 }
 
+.middle .user_login {
+  display: grid;
+  grid-template-columns: 200px 60px;
+}
 .middle .aside form {
   display: grid;
-  grid-template-columns: 140px 50px 60px;
+  grid-template-columns: 140px 60px;
   grid-template-rows: 20px 20px;
   justify-items: center;
 }
@@ -31,7 +31,7 @@ form {
   grid-row: 2/3;
 }
 .middle .aside .login {
-  width: 50px;
+  width: 60px;
   height: 40px;
 }
 
@@ -47,18 +47,17 @@ form {
   background: black;
 }
 
-.middle .info {
+.middle .user_info {
   text-align: center;
 }
 
-.middle .info div {
+.middle .user_info div {
   padding-bottom: 10px;
 }
 
 .sidebar {
   text-align: center;
 }
-
 
 .sidebar #title {
   grid-column: 2/3;

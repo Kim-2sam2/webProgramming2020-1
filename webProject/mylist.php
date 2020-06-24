@@ -27,6 +27,7 @@ if (!$userid) {
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/mylist.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <script type="text/javascript" src="scripts/common.js"></script>
     <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
 
@@ -38,7 +39,7 @@ if (!$userid) {
 
         <!--main section-->
         <section class="middle">
-            <?php include "myboard.php"; ?>
+            <?php include "mylist_board.php"; ?>
 
             <!--aside의 정보를 계속 가지고 있어야함-->
             <?php include "aside.php"; ?>
