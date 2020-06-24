@@ -1,6 +1,20 @@
 <?php
 include 'func.php';
 session_start();
+if (isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
+else $userid = "";
+if (isset($_SESSION["username"])) $username = $_SESSION["username"];
+else $username = "";
+
+if (!$userid) {
+    echo ("
+                <script>
+                alert('로그인 후 이용해 주세요!');
+                history.go(-1)
+                </script>
+    ");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <div id="board_box">
     <ul id="board_list">
         <li>

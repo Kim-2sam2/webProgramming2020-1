@@ -22,7 +22,6 @@
   --font-small: 16px;
   --font-micro: 10px;
 }
-
 .myBoard {
   display: grid;
   grid-template-columns: minmax(200px, auto) 660px;
@@ -160,6 +159,10 @@
   display: grid;
   grid-template-columns: 40px 420px 40px;
   grid-template-rows: 60px 240px;
+}
+
+.todo_view form {
+  display: none;
 }
 
 .todo_view #title {

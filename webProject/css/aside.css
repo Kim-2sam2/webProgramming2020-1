@@ -1,3 +1,7 @@
+form {
+  display: none;
+}
+
 .middle .aside {
   width: 290px;
   height: 400px;
@@ -84,6 +88,10 @@
 
 .sidebar #side_todo_list div {
   text-align: center;
+}
+
+.sidebar #side_todo_list form {
+  display: none;
 }
 .sidebar .side_check {
   float: left;
