@@ -106,9 +106,16 @@
   padding: 15px;
   border-bottom: solid 3px #aaaaaa;
   font-size: 24px;
+
 }
+
 #viewer .col2 {
   float: right;
+  font-size: 16px;
+}
+#viewer .col3 {
+  float: right;
+
   font-size: 16px;
 }
 
@@ -121,6 +128,10 @@
   margin-left:10px;
   margin-top:20px;
 }
+#viewer #content #update_input{
+  margin-left:100px;
+  height: 25px;
+}
 
 #viewer #content li {
   border-bottom: 2px solid black;
@@ -131,7 +142,6 @@
   text-align: center;
   font-size: 18px;
 }
-
 
 #view #content li:first-child {
   padding-top: 25px;

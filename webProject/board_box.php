@@ -9,6 +9,7 @@ session_start()
             <span class="col3">작성자</span>
             <span class="col4">작성일</span>
             <span class="col5">조회수</span>
+            <span class="col5">추천수</span>
         </li>
         <?php
         if (isset($_GET["page"])) {
@@ -42,6 +43,7 @@ session_start()
             $id = $row["id"];
             $regist_day = $row["regist_day"];
             $view = $row["view"];
+            $likes = $row["likes"];
             echo ("
             <li>
                 <span class='col1'>$num</span>
@@ -51,6 +53,7 @@ session_start()
                 <span class='col3'>$id</span>
                 <span class='col4'>$regist_day</span>
                 <span class='col5'>$view</span>
+                <span class='col5'>$likes</span>
             ");
             $number--;
         }

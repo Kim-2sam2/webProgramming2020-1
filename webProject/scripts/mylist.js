@@ -78,19 +78,7 @@ function check_todo(x) {
     form.submit();
   }
 }
-function check_todo_my(x) {
-  var index = x.getAttribute("index_my");
-  var form = document.getElementById(index);
-  console.log('test: ' + form);
-  return;
-  if (x.checked == true) {
-    x.nextElementSibling.style.textDecoration = "line-through";
-    form.submit();
-  } else {
-    x.nextElementSibling.style.textDecoration = "none";
-    form.submit();
-  }
-}
+
 
 function view_todo(content, fin, num) {
   var todo = document.getElementById("side_todo_list");
@@ -127,9 +115,4 @@ function view_todo(content, fin, num) {
   node.appendChild(input);
   node.appendChild(div);
   todo.appendChild(node);
-}
-
-function del(x) {
-  var form = document.getElementById("delete_" + x);
-  form.submit();
 }
