@@ -24,7 +24,7 @@
                 where T.list = $num limit 5";
                 $todo = mysqli_query($con, $sql);
                 echo "<li class='content'>";
-                echo "<a class='id' href='board_view.php?$num'>$title</a>";
+                echo "<a class='id' href='board_view.php?num=$num'>$title</a>";
                 echo "<ul class='todo'>";
                 while ($todo_list = mysqli_fetch_array($todo)) {
                     $content = $todo_list["content"];

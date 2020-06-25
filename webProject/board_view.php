@@ -18,7 +18,7 @@ $view = $row["view"];
 $new_view = $view + 1;
 $sql = "update todoList_20160705 set view=$new_view where num=$num";
 mysqli_query($con, $sql);
-//종료 필수//
+mysqli_close($con);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +35,11 @@ mysqli_query($con, $sql);
     <script type="text/javascript" src="scripts/mylist.js"></script>
 
 </head>
+<style>
+form {
+    display: none;
+}
+</style>
 
 <body>
     <div class="wrapper">
@@ -71,11 +76,14 @@ mysqli_query($con, $sql);
                     if ($userid == $_SESSION["userid"]) {
                         echo ("
                             <li>
-                                @@post방식으로@@
                                 <div onclick='locate('mylist_update.php?num'>수정</div>
                             </li>
                             <li>
-                                <div onclick=''>삭제</div>
+                                <form method='post' id='delete' action='mylist_delete.php'>
+                                <input type=hidden name='num' value=$num></input>
+                                <input type=hidden name='page' value=$page></input>
+                                </form>
+                                <div onclick='del()'>삭제</div>
                             </li>
                             <li>
                                 <div onclick = locate('board.php?page=$page')>목록</div>

@@ -42,14 +42,14 @@ function remove(x) {
 
 function call_list(index) {
   //show();
-  var node = document.getElementsByClassName('todo_view');
-  var input = document.createElement('input');
-  input.type = 'hidden';
-  input.name = 'col';
+  var node = document.getElementsByClassName("todo_view");
+  var input = document.createElement("input");
+  input.type = "hidden";
+  input.name = "col";
   input.value = index;
 
-  var form = document.createElement('form');
-  form.method = 'post';
+  var form = document.createElement("form");
+  form.method = "post";
   form.appendChild(input);
   form.style.display = "none";
   node[0].appendChild(form);
@@ -87,7 +87,6 @@ function check_todo(x) {
   } else {
     x.nextElementSibling.style.textDecoration = "none";
     form.submit();
-
   }
 }
 
@@ -101,20 +100,20 @@ function view_todo(content, fin, num) {
   var div = document.createElement("DIV");
   div.innerHTML = content;
 
-  var hidden = document.createElement('input');
-  hidden.type = 'hidden';
-  hidden.name = 'checked';
+  var hidden = document.createElement("input");
+  hidden.type = "hidden";
+  hidden.name = "checked";
   hidden.value = fin;
 
-  var hidden2 = document.createElement('input');
-  hidden2.type = 'hidden';
-  hidden2.name = 'num';
+  var hidden2 = document.createElement("input");
+  hidden2.type = "hidden";
+  hidden2.name = "num";
   hidden2.value = num;
 
-  var form = document.createElement('form');
-  form.method = 'post';
+  var form = document.createElement("form");
+  form.method = "post";
   form.id = num;
-  form.action = 'checked_db.php';
+  form.action = "checked_db.php";
   form.appendChild(hidden);
   form.appendChild(hidden2);
   if (fin) {
@@ -126,4 +125,9 @@ function view_todo(content, fin, num) {
   node.appendChild(input);
   node.appendChild(div);
   todo.appendChild(node);
+}
+
+function del() {
+  var form = document.getElementById("delete");
+  form.submit();
 }
