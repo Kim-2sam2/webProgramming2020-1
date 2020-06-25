@@ -176,6 +176,9 @@
 .todo_view #close {
   grid-column: 3/4;
   height: 40px;
+  border: 3px solid black;
+  border-radius: 6px;
+  background-color: white;
 }
 
 .todo_view #todo_list {
@@ -197,4 +200,18 @@
 .todo_view .check {
   float: left;
   margin-top: 5px;
+}
+
+.todo_view #del {
+  text-align: center;
+  display: inline;
+}
+.todo_view #del_btn {
+  border: 3px solid black;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  line-height: 40px;
+  vertical-align: middle;
+  height: 40px;
 }

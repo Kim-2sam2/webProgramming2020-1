@@ -59,7 +59,7 @@
                 function call_todo($index)
                 {
                     global $con;
-                    $sql = "select L.title, T.content, T.finish, T.num from todo_20160705 T
+                    $sql = "select L.title, L.num as todoList_num, T.content, T.finish, T.num as todo_num from todo_20160705 T
                     inner join todoList_20160705 L
                     on T.list = L.num
                     where T.list = $index";
@@ -68,15 +68,24 @@
                     $title = $todo_arr['title'];
                     mysqli_close($con);
 
+                    $num = $todo_arr['todoList_num'];
+
                     echo (" 
+                    <div id='del'>
+                    <form method='post' id='delete' action='mylist_delete.php'>
+                    <input type=hidden name='num' value=$num></input>
+                    </form>
+                    <div id='del_btn' onclick='del()'>삭제</div>
+                    </div>   
                         <div id='title'> $title </div>
+                        
                         <button id='close' onclick='hide()'>X</button>
                         <ul id='todo_list'>
                     ");
 
                     //수정기능 조건문 시작부분(isset($_POST))//
                     do {
-                        $index = $todo_arr['num'];
+                        $index = $todo_arr['todo_num'];
                         $content = $todo_arr['content'];
                         $fin = $todo_arr['finish'];
 
@@ -106,7 +115,8 @@
                         }
                     } while ($todo_arr = mysqli_fetch_array($todo_query));
 
-                    echo ("</ul>");
+                    echo ("
+                    </ul>");
                 }
                 ?>
             </div>
