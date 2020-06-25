@@ -34,6 +34,7 @@ if (!$num_match) {
         session_start();
         $_SESSION["userid"] = $row["id"];
         $_SESSION["username"] = $row["name"];
+        $_SESSION["admin"] = $row["admin"];
 
         echo ("
                 <script>

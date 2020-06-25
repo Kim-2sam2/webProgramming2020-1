@@ -4,6 +4,9 @@ if (isset($_SESSION["userid"])) $userid = $_SESSION["userid"];
 else $userid = "";
 if (isset($_SESSION["username"])) $username = $_SESSION["username"];
 else $username = "";
+if (isset($_SESSION["admin"])) $admin = $_SESSION["admin"];
+else $admin = 0;
+
 ?>
 
 <section class="aside">
@@ -20,21 +23,30 @@ else $username = "";
         <?php } else {
             $info = $username . "님 반갑습니다.";
         ?>
+
+
+        <?php if ($admin) { ?>
+        <div>
+            <input type="button" value="관리자모드" onclick="locate('admin.php')" />
+        </div>
+        <div class="logout">
+            <input type="button" value="로그아웃" onclick="locate('user_logout.php')" />
+        </div>
+        <?php } else { ?>
         <div class="user_info">
             <div><?= $info ?></div>
             <div class="update">
                 <input type="button" value="정보수정" onclick="locate('user_info.php')" />
-
             </div>
             <div class="logout">
                 <input type="button" value="로그아웃" onclick="locate('user_logout.php')" />
-
             </div>
         </div>
+        <?php } ?>
         <div class="sidebar">
             <?php include "aside_sidebar.php" ?>
-
         </div>
         <?php } ?>
+
     </div>
 </section>
