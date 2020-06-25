@@ -2,7 +2,11 @@
 
 include 'func.php';
 $index = $_POST["num"];
-$checked = $_POST["checked"];
+if (isset($_POST["checked"])) {
+    $checked = $_POST["checked"];
+} else {
+    $checked = $_POST["checked_my"];
+}
 $con = connectDB();
 if (!$checked) {
     $sql = "update todo_20160705 set finish = 1 where num = $index";

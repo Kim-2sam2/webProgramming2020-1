@@ -62,25 +62,24 @@ function show(x) {
   document.getElementById(x).style.display = "block";
 }
 
-function hide() {
+function hide(x) {
   //document.getElementsByClassName("view")[0].style.display = "none";
   document.getElementById(x).style.display = "none";
 }
 
-function check_todo() {
-  var chkbox = document.querySelectorAll("#todo_list .check");
-
-  for (var i in chkbox) {
-    if (chkbox[i].checked == true) {
-      chkbox[i].nextElementSibling.style.textDecoration = "line-through";
-    } else {
-      chkbox[i].nextElementSibling.style.textDecoration = "none";
-    }
-  }
-}
-
 function check_todo(x) {
   var index = x.getAttribute("index");
+  var form = document.getElementById(index);
+  if (x.checked == true) {
+    x.nextElementSibling.style.textDecoration = "line-through";
+    form.submit();
+  } else {
+    x.nextElementSibling.style.textDecoration = "none";
+    form.submit();
+  }
+}
+function check_todo_my(x) {
+  var index = x.getAttribute("index_my");
   var form = document.getElementById(index);
   if (x.checked == true) {
     x.nextElementSibling.style.textDecoration = "line-through";
@@ -128,7 +127,7 @@ function view_todo(content, fin, num) {
   todo.appendChild(node);
 }
 
-function del() {
-  var form = document.getElementById("delete");
+function del(x) {
+  var form = document.getElementById("delete_" + x);
   form.submit();
 }
