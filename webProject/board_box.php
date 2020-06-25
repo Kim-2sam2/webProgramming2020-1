@@ -45,7 +45,9 @@ session_start()
             echo ("
             <li>
                 <span class='col1'>$num</span>
-                <span class='col2'>$title</span>
+                <span class='col2'>
+                    <a href='board_view.php?num=$num&page=$page'>$title</a>
+                </span>
                 <span class='col3'>$id</span>
                 <span class='col4'>$regist_day</span>
                 <span class='col5'>$view</span>

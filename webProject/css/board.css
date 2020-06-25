@@ -47,6 +47,16 @@
 #board_box .buttons li {
   display: inline;
 }
+
+#board_box .buttons div {
+  display: inline;
+  border: 3px solid black;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-align: center;
+  background: white;
+}
 #board_box .buttons button {
   padding: 5px 10px;
   cursor: pointer;
@@ -94,18 +104,27 @@
   border-bottom: solid 2px #516e7f;
   font-size: 20px;
 }
-#view_content li:nth-child(1) {
+
+#board_box .col1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+#board_box .col2 {
+  font-size: 14px;
+}
+#viewer li:nth-child(1) {
   padding: 15px;
+  border-top: solid 3px #aaaaaa;
   border-bottom: solid 1px #aaaaaa;
 }
-#view_content .col2 {
+#viewer .col2 {
   float: right;
 }
-#view_content li:nth-child(2) {
+#viewer li:nth-child(2) {
   padding: 15px 15px 80px 15px;
   border-bottom: solid 1px #cccccc;
 }
-#view_content li:nth-child(3) button {
+#viewer li:nth-child(3) button {
   padding: 5px 20px;
   margin: 15px 0 40px 720px;
   cursor: pointer;
