@@ -3,13 +3,9 @@
   position: relative;
   width: 800px;
   margin: 0 auto;
+  padding-top: 5px;
 }
-#board_box h3 {
-  margin-top: 30px;
-  padding: 10px;
-  border-bottom: solid 2px #516e7f;
-  font-size: 20px;
-}
+
 #board_form span {
   display: inline-block;
 }
@@ -42,7 +38,7 @@
 }
 #board_box .buttons {
   text-align: right;
-  margin: 20px 0 40px 0;
+  margin: 60px 12px 10px 0;
 }
 #board_box .buttons li {
   display: inline;
@@ -97,6 +93,8 @@
 #board_box {
   width: 800px;
   margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 6px;
 }
 #board_box .title {
   margin-top: 30px;
@@ -104,28 +102,29 @@
   border-bottom: solid 2px #516e7f;
   font-size: 20px;
 }
-
-#board_box .col1 {
-  font-size: 20px;
-  font-weight: bold;
-}
-#board_box .col2 {
-  font-size: 14px;
-}
-#viewer li:nth-child(1) {
+#viewer #top {
   padding: 15px;
-  border-top: solid 3px #aaaaaa;
-  border-bottom: solid 1px #aaaaaa;
+  border-bottom: solid 3px #aaaaaa;
+  font-size: 24px;
 }
 #viewer .col2 {
   float: right;
+  font-size: 16px;
 }
-#viewer li:nth-child(2) {
-  padding: 15px 15px 80px 15px;
-  border-bottom: solid 1px #cccccc;
+
+#viewer #content {
+  margin-top: 20px;
 }
-#viewer li:nth-child(3) button {
-  padding: 5px 20px;
-  margin: 15px 0 40px 720px;
-  cursor: pointer;
+#viewer #content li {
+  border-bottom: 2px solid black;
+  line-height: 52px;
+  width: 500px;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+}
+
+#view #content li:first-child {
+  padding-top: 25px;
 }

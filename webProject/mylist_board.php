@@ -74,6 +74,7 @@
                         <ul id='todo_list'>
                     ");
 
+                    //수정기능 조건문 시작부분(isset($_POST))//
                     do {
                         $index = $todo_arr['num'];
                         $content = $todo_arr['content'];
