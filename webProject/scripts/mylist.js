@@ -57,12 +57,14 @@ function call_list(index) {
   form.submit();
 }
 
-function show() {
-  document.getElementsByClassName("view")[0].style.display = "block";
+function show(x) {
+  //document.getElementsByClassName("view")[0].style.display = "block";
+  document.getElementById(x).style.display = "block";
 }
 
 function hide() {
-  document.getElementsByClassName("view")[0].style.display = "none";
+  //document.getElementsByClassName("view")[0].style.display = "none";
+  document.getElementById(x).style.display = "none";
 }
 
 function check_todo() {
@@ -80,7 +82,6 @@ function check_todo() {
 function check_todo(x) {
   var index = x.getAttribute("index");
   var form = document.getElementById(index);
-  console.log(form);
   if (x.checked == true) {
     x.nextElementSibling.style.textDecoration = "line-through";
     form.submit();

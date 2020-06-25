@@ -11,4 +11,10 @@ if (!$checked) {
 }
 mysqli_query($con, $sql);
 mysqli_close($con);
-echo ("<script>history.back();</script>");
+
+if (isset($_GET['show'])) {
+    $index = $_GET["show"];
+    echo ("<script> location.href='mylist.php?show=$index'</script>");
+} else {
+    echo ("<script>history.go(-1);</script>");
+}

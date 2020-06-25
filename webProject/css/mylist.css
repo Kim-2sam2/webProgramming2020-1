@@ -33,6 +33,7 @@
 
 .myBoard_list {
   background: grey;
+  grid-template-columns: 1/2;
   overflow: auto;
 }
 
@@ -144,6 +145,7 @@
 
 .viewer {
   position: relative;
+  grid-template-columns: 2/3;
 }
 
 .view {

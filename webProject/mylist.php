@@ -41,7 +41,6 @@ if (!$userid) {
         <section class="middle">
             <?php include "mylist_board.php"; ?>
 
-            <!--aside의 정보를 계속 가지고 있어야함-->
             <?php include "aside.php"; ?>
 
         </section>
