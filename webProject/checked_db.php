@@ -1,12 +1,8 @@
 <?php
-
 include 'func.php';
 $index = $_POST["num"];
-if (isset($_POST["checked"])) {
-    $checked = $_POST["checked"];
-} else {
-    $checked = $_POST["checked_my"];
-}
+$checked = $_POST["checked"];
+
 $con = connectDB();
 if (!$checked) {
     $sql = "update todo_20160705 set finish = 1 where num = $index";
@@ -16,9 +12,9 @@ if (!$checked) {
 mysqli_query($con, $sql);
 mysqli_close($con);
 
-if (isset($_GET['show'])) {
-    $index = $_GET["show"];
-    echo ("<script> location.href='mylist.php?show=$index'</script>");
+if (isset($_POST['url'])) {
+    $url = $_POST["url"];
+    echo ("<script> location.href= '$url' </script>");
 } else {
     echo ("<script>history.go(-1);</script>");
 }

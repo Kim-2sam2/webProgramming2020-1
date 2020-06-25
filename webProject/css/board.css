@@ -115,6 +115,13 @@
 #viewer #content {
   margin-top: 20px;
 }
+
+#viewer #content input{
+  float:left;
+  margin-left:10px;
+  margin-top:20px;
+}
+
 #viewer #content li {
   border-bottom: 2px solid black;
   line-height: 52px;
@@ -125,6 +132,8 @@
   font-size: 18px;
 }
 
+
 #view #content li:first-child {
   padding-top: 25px;
 }
+

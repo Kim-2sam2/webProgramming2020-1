@@ -12,18 +12,23 @@
         while ($title_arr = mysqli_fetch_array($title_query)) {
             $list_index = $title_arr['num'];
             $title = $title_arr['title'];
+            // echo ("
+            //     <div class='col' onclick='show($list_index)'>
+            //     $title
+            //     </div>
+
+            // ");  
             echo ("
-                <div class='col' onclick='show($list_index)'>
+                <div class='col' onclick=locate('board_view.php?num=$list_index')>
                 $title
-                </div>
-                
+                </div>                
             ");
-            call_todo($list_index);
+            //call_todo($list_index);
         }
-        if (isset($_GET['show'])) {
-            $i = $_GET["show"];
-            echo ("<script>show($i);</script>");
-        }
+        // if (isset($_GET['show'])) {
+        //     $i = $_GET["show"];
+        //     echo ("<script>show($i);</script>");
+        // }
         ?>
     </div>
 
@@ -87,10 +92,11 @@
             $content = $todo_arr['content'];
             $fin = $todo_arr['finish'];
 
+            $todo_index_my = $todo_index . 'my';
             if ($fin) {
                 echo ("
                             <li>
-                            <form method='post' id='$todo_index' action='checked_db.php?show=$list_index'>
+                            <form method='post' id='$todo_index_my' action='checked_db.php?show=$list_index'>
                                 <input type='hidden' name='checked_my' value='$fin' ></input>
                                 <input type='hidden' name='num' value='$todo_index'></input>
                                 <input type='hidden' name='url' value='mylist.php'></input>
@@ -102,7 +108,7 @@
             } else {
                 echo ("
                             <li>
-                            <form method='post' id='$todo_index' action='checked_db.php?show=$list_index'>
+                            <form method='post' id='$todo_index_my' action='checked_db.php?show=$list_index'>
                                 <input type='hidden' name='checked_my' value='$fin'></input>
                                 <input type='hidden' name='num' value='$todo_index'></input>
                                 <input type='hidden' name='url' value='mylist.php'></input>

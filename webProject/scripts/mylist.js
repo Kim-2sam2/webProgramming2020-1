@@ -81,6 +81,8 @@ function check_todo(x) {
 function check_todo_my(x) {
   var index = x.getAttribute("index_my");
   var form = document.getElementById(index);
+  console.log('test: ' + form);
+  return;
   if (x.checked == true) {
     x.nextElementSibling.style.textDecoration = "line-through";
     form.submit();
