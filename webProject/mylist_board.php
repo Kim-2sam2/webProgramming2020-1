@@ -113,7 +113,6 @@
                                 <input type='hidden' name='num' value='$todo_index'></input>
                                 <input type='hidden' name='url' value='mylist.php'></input>
                             </form>
-
                             <input class='check' type='checkbox' index_my='$todo_index' onclick='check_todo_my(this)' />
                             <span id='content'>$content</span>
                             </li>
