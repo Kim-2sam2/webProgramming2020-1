@@ -8,7 +8,7 @@ if (isset($_GET["page"])) {
     $page = 1;
 }
 $con = connectDB();
-$sql = "select * from todo_20160705 T
+$sql = "select *, T.num as todo_index, L.num as todoList_index from todo_20160705 T
         inner join todoList_20160705 L on L.num = T.list
         where L.num = $list_index";
 $result = mysqli_query($con, $sql);
@@ -71,9 +71,9 @@ form {
                                 do {
                                     $content = $row["content"];
                                     $finish = $row["finish"];
-                                    $todo_index = $row["num"];
+                                    $todo_index = $row["todo_index"];
                                     echo ('<li>');
-                                    echo ("<form method=post id=$todo_index action=checked_db.php>");
+                                    echo ("<form method=post id=$todo_index action=checked_db.php?list=$list_index>");
                                     echo ("<input type='hidden' name='checked' value=$finish></input>");
                                     echo ("<input type='hidden' name='num' value=$todo_index></input>");
                                     echo ("<input type='hidden' name='url' value='board_view.php?num=$list_index&page=$page'></input>");

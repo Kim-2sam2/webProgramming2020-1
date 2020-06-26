@@ -61,6 +61,7 @@
 #board_list li {
   padding: 10px 0;
   border-bottom: solid 1px #dddddd;
+  text-align: center;
 }
 #board_list span {
   display: inline-block;
@@ -106,7 +107,6 @@
   padding: 15px;
   border-bottom: solid 3px #aaaaaa;
   font-size: 24px;
-
 }
 
 #viewer .col2 {
@@ -123,13 +123,13 @@
   margin-top: 20px;
 }
 
-#viewer #content input{
-  float:left;
-  margin-left:10px;
-  margin-top:20px;
+#viewer #content input {
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
 }
-#viewer #content #update_input{
-  margin-left:100px;
+#viewer #content #update_input {
+  margin-left: 100px;
   height: 25px;
 }
 
@@ -147,3 +147,29 @@
   padding-top: 25px;
 }
 
+/*ranking*/
+#ranking_list li {
+  padding: 10px 0;
+  border-bottom: solid 1px #dddddd;
+  text-align: center;
+  font-size: 18px;
+}
+#ranking_list li:first-child {
+  font-size: 20px;
+}
+#ranking_list span {
+  display: inline-block;
+  text-align: center;
+}
+#ranking_list .col1 {
+  width: 100px;
+}
+#ranking_list .col2 {
+  width: 100px;
+}
+#ranking_list .col3 {
+  width: 100px;
+}
+#ranking_list .col4 {
+  width: 100px;
+}
