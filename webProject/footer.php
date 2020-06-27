@@ -1,5 +1,5 @@
 <div id="home">
-    <p>Online ToDo</p>
+    <a href="index.php">Online ToDo</a>
 </div>
 
 <div id="info">
