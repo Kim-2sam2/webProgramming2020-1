@@ -17,6 +17,8 @@ $result = mysqli_query($con, $sql);
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/admin.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e68c65b23.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/common.js"></script>
     <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
@@ -47,12 +49,13 @@ $result = mysqli_query($con, $sql);
                         $admin = $row["admin"];
                         if ($admin) continue;
                     ?>
-                        <li>
-                            <span class="col1"><?= $userid ?></span>
-                            <span class="col2"><?= $username ?></span>
-                            <span class="col3"><?= $email ?></span>
-                            <span class="col4"><button type="button" onclick="location.href='admin_delete_user.php?userid=<?= $userid ?>'">삭제</button></span>
-                        </li>
+                    <li>
+                        <span class="col1"><?= $userid ?></span>
+                        <span class="col2"><?= $username ?></span>
+                        <span class="col3"><?= $email ?></span>
+                        <span class="col4"><button type="button"
+                                onclick="location.href='admin_delete_user.php?userid=<?= $userid ?>'">삭제</button></span>
+                    </li>
                     <?php } ?>
                 </ul>
 
@@ -77,25 +80,25 @@ $result = mysqli_query($con, $sql);
                         $regist_day = $row["regist_day"];
                         $view = $row["view"];
                     ?>
-                        <form method="post" action="admin_delete_board.php">
-                            <li>
-                                <span class="col1"><input type="checkbox" name="item[]" value="<?= $num ?>"></span>
-                                <span class="col2"><?= $num ?></span>
-                                <span class="col3"><?= $userid ?></span>
-                                <span class="col4"><?= $title ?></span>
-                                <span class="col5"><?= $regist_day ?></span>
-                                <span class="col6"><?= $view ?></span>
-                            </li>
+                    <form method="post" action="admin_delete_board.php">
+                        <li>
+                            <span class="col1"><input type="checkbox" name="item[]" value="<?= $num ?>"></span>
+                            <span class="col2"><?= $num ?></span>
+                            <span class="col3"><?= $userid ?></span>
+                            <span class="col4"><?= $title ?></span>
+                            <span class="col5"><?= $regist_day ?></span>
+                            <span class="col6"><?= $view ?></span>
+                        </li>
                         <?php
                     }
                     mysqli_close($con);
                         ?>
                         <button type="submit">선택된 글 삭제</button>
-                        </form>
+                    </form>
                 </ul>
             </div>
         </section>
-        <footer>
+        <footer class="footer">
             <?php include "footer.php"; ?>
         </footer>
     </div>

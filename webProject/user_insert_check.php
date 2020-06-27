@@ -2,6 +2,8 @@
 
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e68c65b23.js" crossorigin="anonymous"></script>
     <style>
     h3 {
         padding-left: 5px;
