@@ -6,7 +6,6 @@ if (isset($_SESSION["username"])) $username = $_SESSION["username"];
 else $username = "";
 if (isset($_SESSION["admin"])) $admin = $_SESSION["admin"];
 else $admin = 0;
-
 ?>
 
 <section class="aside">
@@ -24,7 +23,6 @@ else $admin = 0;
             <?php } else {
                 $info = $username . "님 반갑습니다.";
             ?>
-
 
             <?php if ($admin) { ?>
             <div>

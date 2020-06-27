@@ -1,5 +1,4 @@
 <?php
-
 //include 'func.php';
 //session_start();
 $con = connectDB();
@@ -30,7 +29,25 @@ if ($num_match) {
         $content = $todo['content'];
         $fin = $todo['finish'];
         $num = $todo['num'];
-        echo ("<script> view_todo('$content', $fin, $num) </script>");
+        //echo ("<script> view_todo('$content', $fin, $num) </script>");
+?>
+<li>
+    <form method="post" id=<?= $num ?> action="checked_db.php">
+        <input type="hidden" name="checked" value=<?= $fin ?>>
+        <input type="hidden" name="num" value=<?= $num ?>>
+    </form>
+    <?php
+            if ($fin) {
+            ?>
+    <input class="side_check" type="checkbox" index=<?= $num ?> onclick="check_todo(this)" checked="checked">
+    <div style="text-Decoration: line-through"><?= $content ?></div>
+    <?php } else { ?>
+
+    <input class="side_check" type="checkbox" index=<?= $num ?> onclick="check_todo(this)">
+    <div><?= $content ?></div>
+    <?php } ?>
+</li>
+<?php
     } while ($todo = mysqli_fetch_array($result));
     echo ("</ul>");
 } else {

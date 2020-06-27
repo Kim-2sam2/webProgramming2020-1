@@ -39,12 +39,10 @@ if (!$userid) {
             <?php include "header.php"; ?>
         </header>
 
-        <!--main section-->
         <section class="middle">
             <?php include "mylist_board.php"; ?>
 
             <?php include "aside.php"; ?>
-
         </section>
 
         <footer class="footer">

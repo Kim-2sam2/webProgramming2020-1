@@ -33,7 +33,6 @@ session_start();
 
         <footer class="footer">
             <?php include "footer.php"; ?>
-
         </footer>
     </div>
 </body>

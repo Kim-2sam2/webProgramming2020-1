@@ -41,9 +41,7 @@ for ($i = 0; $i < count($_POST["item"]); $i++) {
     mysqli_query($con, $sql);
 }
 
-
 mysqli_close($con);
-
 
 echo "
 <script>

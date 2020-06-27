@@ -84,7 +84,6 @@ mysqli_close($con);
             </div>
         </section>
 
-
         <footer class="footer">
             <?php include "footer.php"; ?>
 

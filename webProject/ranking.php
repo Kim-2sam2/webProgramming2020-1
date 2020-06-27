@@ -67,7 +67,6 @@ $result = mysqli_query($con, $sql);
             <?php include "aside.php"; ?>
         </section>
 
-
         <footer class="footer">
             <?php include "footer.php"; ?>
 
