@@ -1,3 +1,15 @@
-<div class="email">khwoo8026@gmail.com</div>
-<div class="name">20160705</div>
-<div class="git">https://github.com/Kim-2sam2?tab=repositories
+<div id="home">
+    <p>Online ToDo</p>
+</div>
+
+<div id="info">
+    <div id="name">20160705 김현우</div>
+    <div id="email">
+        <i class="far fa-envelope"></i>
+        <span>khwoo8026@gmail.com</span>
+    </div>
+    <div id="git">
+        <i class="fab fa-github"></i>
+        <a href="https://bit.ly/2Zg3Ppp" target="_blank">Git hub</a>
+    </div>
+</div>

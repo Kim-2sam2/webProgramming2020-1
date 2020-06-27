@@ -59,9 +59,41 @@ input {
   margin-top:5px;
 }
 
-footer {
+.footer {
+  display: grid;
+  grid-template-columns: 650px 650px;
   border-radius: 6px;
   margin-top: 5px;
-  background: yellow;
+  background: #78909C;
   margin-bottom: 10px;
 }
+
+.footer #home {
+  text-align: center;
+  line-height: 70px;
+  vertical-align: middle;
+}
+
+.footer #home p{
+  font-size: 40px;
+  color: black;
+}
+
+.footer #info {
+  display: grid;
+  grid-template-columns: 325px 325px;
+  grid-template-rows: 42px 42px;
+  align-items: stretch;
+}
+
+.footer #info div {
+  text-align: center;
+
+  line-height: 42px;
+
+}
+.footer #name {
+  grid-column: 2/3;
+}
+
+
