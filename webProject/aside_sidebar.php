@@ -11,7 +11,7 @@ $row = mysqli_fetch_array($result);
 if ($num_match) {
     $list_num = $row["num"];
 
-    $sql = "select T.content, T.finish, T.num, L.title from todo_20160705 T
+    $sql = "select T.content, T.finish, T.num, L.title, L.complete from todo_20160705 T
     inner join todoList_20160705 L on L.num = T.list
     where L.id = '$userid' and T.list = '$list_num'";
     $result = mysqli_query($con, $sql);
