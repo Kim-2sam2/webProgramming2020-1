@@ -46,7 +46,7 @@
 
 #board_box .buttons div {
   display: inline;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 6px;
   padding: 5px 10px;
   cursor: pointer;
@@ -148,6 +148,7 @@
 }
 
 /*ranking*/
+
 #ranking_list li {
   padding: 10px 0;
   border-bottom: solid 1px #dddddd;

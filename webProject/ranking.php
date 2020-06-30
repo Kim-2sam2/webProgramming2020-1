@@ -17,6 +17,8 @@ $result = mysqli_query($con, $sql);
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/board.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e68c65b23.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/common.js"></script>
     <script type="text/javascript" src="scripts/mylist.js"></script>
 </head>
@@ -65,7 +67,11 @@ $result = mysqli_query($con, $sql);
             <?php include "aside.php"; ?>
         </section>
 
+<<<<<<< HEAD
         <footer>
+=======
+        <footer class="footer">
+>>>>>>> 1513a6ceded4241a167dc0ee36c3ecacce9cb6f5
             <?php include "footer.php"; ?>
 
         </footer>

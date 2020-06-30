@@ -25,6 +25,8 @@ mysqli_close($con);
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/user.css" />
     <link rel="stylesheet" type="text/css" href="css/aside.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e68c65b23.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/common.js"></script>
     <script type="text/javascript" src="scripts/user.js"></script>
 </head>
@@ -84,7 +86,7 @@ mysqli_close($con);
             </div>
         </section>
 
-        <footer>
+        <footer class="footer">
             <?php include "footer.php"; ?>
 
         </footer>

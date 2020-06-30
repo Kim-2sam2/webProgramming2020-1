@@ -1,5 +1,5 @@
 <div class="title">
-    <a href="index.php">TITLE</a>
+    <a href="index.php">Online ToDo</a>
 </div>
 <nav class="top_menu">
     <ul>
